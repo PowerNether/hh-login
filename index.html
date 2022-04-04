@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./materialize.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./relog.css" />
+  </head>
+  <body>
+    <a class="btn modal-trigger" href="#relog__number">login</a>
+    <a class="btn modal-trigger" href="#relog__password">password</a>
+    <a class="btn modal-trigger" href="#relog__newpassword">new password</a>
+    <a class="btn modal-trigger" href="#relog__code">code</a>
+    <a class="btn modal-trigger" href="#relog__role">role</a>
+
+    <div id="relog__number" class="modal relog__modal">
+      <div class="modal-header">
+        <div class="relog__title">Войти или зарегистрироваться</div>
+        <div class="modal-close"></div>
+      </div>
+      <div class="modal-box">
+        <div class="relog__field">
+          <input type="text" class="relog__input relog__phone" placeholder="Номер телефона" />
+          <label class="relog__label">Номер телефона</label>
+          <span class="relog__clear"></span>
+        </div>
+        <button class="relog__btn relog__btn-dark">Продолжить</button>
+        <button class="relog__btn relog__btn-clear">Забыли пароль?</button>
+      </div>
+    </div>
+    <div id="relog__password" class="modal relog__modal">
+      <div class="modal-header">
+        <div class="relog__title">Вход</div>
+        <div class="relog__subtitle">Введите пароль от вашего аккаунта</div>
+        <div class="modal-close"></div>
+      </div>
+      <div class="modal-box">
+        <div class="relog__field">
+          <input type="password" class="relog__input" placeholder="Пароль" />
+          <label class="relog__label">Пароль</label>
+          <span class="relog__visibality"></span>
+        </div>
+        <button class="relog__btn relog__btn-dark">Продолжить</button>
+        <p class="relog__text">
+          Нажав на кнопку, соглашаюсь на обработку
+          <a href="#" class="relog__link">персональных данных</a>
+        </p>
+      </div>
+    </div>
+    <div id="relog__newpassword" class="modal relog__modal">
+      <div class="modal-header">
+        <div class="relog__title">Вход</div>
+        <div class="relog__subtitle">Введите пароль от вашего аккаунта</div>
+        <div class="modal-close"></div>
+      </div>
+      <div class="modal-box">
+        <div class="relog__field">
+          <input type="password" class="relog__input relog__newpassword" placeholder="Пароль" />
+          <label class="relog__label">Пароль</label>
+          <span class="relog__visibality"></span>
+        </div>
+        <div class="relog__errors"></div>
+        <p class="relog__list-title">Требования к паролю:</p>
+        <ul class="relog__list">
+          <li class="relog__item relog__minl">минимум 8 символов</li>
+          <li class="relog__item relog__char">прописные и строчные латинские буквы</li>
+          <li class="relog__item relog__minn">хотя бы одна цифра</li>
+        </ul>
+        <p class="relog__req-title">Ненадёжный пароль</p>
+        <div class="relog__req">
+          <div class="relog__req-item"></div>
+          <div class="relog__req-item"></div>
+          <div class="relog__req-item"></div>
+        </div>
+        <button disabled class="relog__btn relog__btn-dark">Продолжить</button>
+        <p class="relog__text">
+          Нажав на кнопку, соглашаюсь на обработку
+          <a href="#" class="relog__link">персональных данных</a>
+        </p>
+      </div>
+    </div>
+    <div id="relog__code" class="modal relog__modal">
+      <div class="modal-header">
+        <div class="relog__title">Подтверждение номера</div>
+        <div class="relog__subtitle">
+          Введите код из SMS, отправленного на номер
+          <span class="relog__number">+7 987 654-32-10</span>
+        </div>
+        <div class="modal-close"></div>
+      </div>
+      <div class="modal-box">
+        <div class="relog__field">
+          <input type="password" class="relog__input" placeholder="Пароль" />
+          <label class="relog__label">Код из СМС</label>
+        </div>
+        <div class="relog__btns">
+          <button class="relog__btn relog__btn-light">Изменить номер</button>
+          <button disabled class="relog__btn relog__btn-dark">Продолжить</button>
+        </div>
+        <p class="relog__text">
+          Повторная отправка будет доступна через
+          <span class="relog__timer">00:57</span> сек.
+        </p>
+      </div>
+    </div>
+    <div id="relog__role" class="modal relog__modal">
+      <div class="modal-header">
+        <div class="relog__title">Выберите свою роль</div>
+        <div class="modal-close"></div>
+      </div>
+      <div class="modal-box">
+        <a href="#" class="relog__choose">
+          Частный брокер
+          <span class="relog__choose-icon"></span>
+        </a>
+        <a href="#" class="relog__choose">
+          Агентство недвижимости
+          <span class="relog__choose-icon"></span>
+        </a>
+        <a href="#" class="relog__choose">
+          Пользователь
+          <span class="relog__choose-icon"></span>
+          <span class="relog__info">Расширенный функционал</span>
+        </a>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./materialize.min.js"></script>
+    <script src="./imask.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".modal").modal();
+      });
+
+      let phone = document.querySelector(".relog__phone") || null;
+      if (phone !== null) {
+        var mask = new IMask(phone, {
+          mask: "+{7} 000 000-00-00",
+        });
+      }
+
+      let clears = Array.from(document.querySelectorAll(".relog__clear")) || null;
+
+      if (clears !== null) {
+        clears.forEach((clear) => {
+          clear.addEventListener("click", function () {
+            this.parentNode.querySelector(".relog__input").value = "";
+            mask.updateValue();
+          });
+        });
+      }
+
+      let visabilitys = Array.from(document.querySelectorAll(".relog__visibality")) || null;
+
+      if (visabilitys !== null) {
+        visabilitys.forEach((visability) => {
+          visability.addEventListener("click", function () {
+            this.classList.toggle("active");
+            let type = this.parentNode.querySelector(".relog__input").getAttribute("type") === "password" ? "text" : "password";
+            this.parentNode.querySelector(".relog__input").setAttribute("type", type);
+          });
+        });
+      }
+
+      let relog__newpassword = document.querySelector(".relog__newpassword") || null;
+
+      if (relog__newpassword !== null) {
+        let minl__item = document.querySelector(".relog__minl");
+        let char__item = document.querySelector(".relog__char");
+        let minn__item = document.querySelector(".relog__minn");
+        let errors = document.querySelector(".relog__errors");
+        let error__min = document.createElement("p");
+        error__min.classList.add("relog__error");
+        error__min.classList.add("relog__error-minl");
+        error__min.innerHTML = "Пароль должен содержать не менее 8 символов";
+        let error__char = document.createElement("p");
+        error__char.classList.add("relog__error");
+        error__char.classList.add("relog__error-minc");
+        error__char.innerHTML = "Пароль должен содержать прописные и строчные латинские буквы";
+        let error__number = document.createElement("p");
+        error__number.classList.add("relog__error");
+        error__number.classList.add("relog__error-minn");
+        error__number.innerHTML = "Пароль должен содержать хотя бы одну цифру";
+        let progress__title = document.querySelector(".relog__req-title") || null
+        let progress = document.querySelector(".relog__req") || null;
+
+        relog__newpassword.addEventListener("input", function () {
+          let rating = 0
+
+          if (this.value.length >= 8) {
+            minl__item.classList.add("active");
+            rating++;
+          } else {
+            minl__item.classList.remove("active");
+          }
+          if (/[a-z]/.test(this.value) && /[A-Z]/.test(this.value)) {
+            char__item.classList.add("active");
+            rating++;
+          } else {
+            char__item.classList.remove("active");
+          }
+          if (/[0-9]/.test(this.value)) {
+            minn__item.classList.add("active");
+            rating++;
+          } else {
+            minn__item.classList.remove("active");
+          }
+
+          if (progress !== null && progress__title !== null) {
+              if (rating === 0) {
+                progress.classList.add('low')
+                progress__title.innerHTML = 'Ненадёжный пароль'
+              } else {
+                progress.classList.remove('low')
+              }
+              if (rating === 1) {
+                progress.classList.add('low')
+                progress__title.innerHTML = 'Ненадёжный пароль'
+              } else {
+                progress.classList.remove('low')
+              }
+              if (rating === 2) {
+                progress.classList.add('average')
+                progress__title.innerHTML = 'Средний пароль'
+              } else {
+                progress.classList.remove('average')
+              }
+              if (rating === 3) {
+                progress.classList.add('full')
+                progress__title.innerHTML = 'Надежный пароль'
+              } else {
+                progress.classList.remove('full')
+              }
+          }
+        });
+        relog__newpassword.addEventListener("change", function () {
+          if (this.value.length < 8) {
+            errors.appendChild(error__min);
+          } else {
+            errors.querySelector(".relog__error-minl") || null !== null ? errors.querySelector(".relog__error-minl").remove() : false;
+          }
+          if (!/[a-z]/.test(this.value) || !/[A-Z]/.test(this.value)) {
+            errors.appendChild(error__char);
+          } else {
+            errors.querySelector(".relog__error-minc") || null !== null ? errors.querySelector(".relog__error-minc").remove() : false;
+          }
+          if (!/[0-9]/.test(this.value)) {
+            errors.appendChild(error__number);
+          } else {
+            errors.querySelector(".relog__error-minn") || null !== null ? errors.querySelector(".relog__error-minn").remove() : false;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
